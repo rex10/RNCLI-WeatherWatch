@@ -1,47 +1,82 @@
-# 🌩️ Weather Watch
+![Build](https://github.com/android/platform-samples/actions/workflows/build.yml/badge.svg)
 
-Introducing *Weather Watch*, the app that delivers accurate weather forecasts, ensuring you’re always prepared for the day’s weather with a smile!
+# Android Platform Samples
 
-This task is designed to evaluate your proficiency in mobile app development, particular with React Native and TypeScript.
+This repository contains a collection of samples that demonstrate the use of different Android OS platform APIs. The samples are organized into folders by topic, and each folder contains a README file that provides more information about the samples in that folder.
 
-## Exercise
+> **Note:** These samples are intended to showcase specific functionality in isolation, and they may use
+> simplified code. They are not intended to be used as production-ready code. The project uses the
+> [casa-android](https://github.com/google/casa-android) (intended only for demo projects).
+> For best practices follow our documentation and check
+> [Now In Android](https://github.com/android/nowinandroid)
 
-Create a mobile application using React Native that encompasses the following:
+Browse the samples inside each topic samples folder:
 
-- Display the location name, current temperature and an image representation of the weather using a location of your choice when the application opens.
-- Display a weekly weather forecast for the selected location.
-   - Display an average temperature, rounded up.
-   - Display an image that best represents the weather for the day.
-- Include a search function that allows users to look up weather by a location name.
-  - If there are multiple locations returned by the API, give the user an option to select one.
-  - When selecting a location, the weather forecast should update.
+- [Accessibility](https://github.com/android/platform-samples/tree/main/samples/accessibility)
+- [Camera](https://github.com/android/platform-samples/tree/main/samples/camera)
+- [Connectivity](https://github.com/android/platform-samples/tree/main/samples/connectivity)
+- [Graphics](https://github.com/android/platform-samples/tree/main/samples/graphics)
+- [Location](https://github.com/android/platform-samples/tree/main/samples/location)
+- [Privacy](https://github.com/android/platform-samples/tree/main/samples/privacy)
+- [Storage](https://github.com/android/platform-samples/tree/main/samples/storage)
+- [User-interface](https://github.com/android/platform-samples/tree/main/samples/user-interface)
+- More to come...
 
-## Resources
+We are constantly adding new samples to this repository. You can find a list of all the available samples [here](https://github.com/android/platform-samples/tree/main/samples/README.md).
 
-- Use the [Open Meteo API](https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m&hourly=temperature_2m,weather_code) to obtain a weather forecast, changing the latitude and longitude where required. Don’t use any packages related to Open Meteo when interacting with the API.
-- Use the [Open Meteo Geocoding API](https://geocoding-api.open-meteo.com/v1/search?name=) to obtain a latitude and longitude for a given location.
-- Use the helper function [getWeatherImage](./src/helpers/getWeatherImage.ts) to map between a WMO weather code coming from the Open Meteo API and an image representation of the weather.
+> 🚧 **Work-in-Progress:** we are working on bringing more existing and new samples into this format.
 
-> Note: All APIs listed above are free to use without sign up.
+## How to run
 
-## Requirements
+1. Clone the repository
+2. Open the whole project in Android Studio.
+3. Sync & Run `app` configuration
 
-- Create a fork of this repository.
-- Use React Native and TypeScript.
-- Ensure the app works on iOS and Android.
-- Showcase your software’s testing capabilities to ensure it meets requirements by testing:
-   - One complex component.
-   - One helper function.
-   - One API request.
-- Ensure that the entire application test suite is passing.
-- Ensure that your solution accounts for edge cases and handles unusual or unexpected scenarios effectively.
-- Ensure that your code is passing TypeScript compiler and ESLint checks.
-   - These jobs have already been defined in package.json.
-- Don’t spend longer than 2 hours on this technical test.
-- Don’t focus too much time on the visual aspects of the app, favour simple layouts and basic styling using React Native libraries over using a UI kit.
+The app will open with the samples list screen that allows you to navigate throughout the different
+categories and available samples.
 
-## Submission
+> **Note:** the `app` module is required to bring together all the samples but it's not relevant
+> for their functionality, you can simply ignore it. The wiring is done under the hood and an
+> implementation detail not needed to understand any sample functionality.
 
-Submit a link to your forked repository with your application contents. Make sure the link is accessible.
+### Deeplink to sample
 
-**Happy Coding**
+To open a specific sample directly you can use one of the auto-generated configurations.
+
+1. Build the project at least once
+2. Open `Run Configuration` dropdown
+3. Select sample name
+4. Run
+
+> **Tip:** use `⌃⌥R` or `Alt+Shift+F10` shortcut to open the full list and launch the selected one. 
+
+## Reporting Issues
+
+You can report an [issue with a sample](https://github.com/android/platform-samples/issues) using
+this repository. When doing so, make sure to specify which sample you are referring to.
+
+## Contributions
+
+Please contribute! We will gladly review any pull requests.
+Make sure to read the [Contributing](CONTRIBUTING.md) page first though.
+
+> Note: make sure to run `./gradlew --init-script gradle/spotless-init.gradle.kts spotlessApply` before 
+> submitting PRs.
+
+## License
+
+```
+Copyright 2023 The Android Open Source Project
+ 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

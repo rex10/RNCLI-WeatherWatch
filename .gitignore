@@ -1,38 +1,41 @@
-# OSX
-#
-.DS_Store
-
-# Xcode
-#
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-**/.xcode.env.local
-
-# Android/IntelliJ
-#
-build/
-.idea
+# Gradle
 .gradle
-local.properties
+build/
+
+captures
+
+**/local.properties
+
+# IntelliJ .idea folder
+.idea/workspace.xml
+.idea/libraries
+.idea/caches
+.idea/navEditor.xml
+.idea/tasks.xml
+.idea/modules.xml
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/deploymentTargetDropDown.xml
+.idea/deploymentTargetSelector.xml
+.idea/misc.xml
+.idea/androidTestResultsUserPreferences.xml
+.idea/inspectionProfiles
+.idea/vcs.xml
+
+# Ignore all auto-generated configs except for app.xml. It's needed as template for the build
+.idea/runConfigurations
+!.idea/runConfigurations/app.xml
+
+gradle.xml
 *.iml
-*.hprof
-.cxx/
-*.keystore
-!debug.keystore
+
+# General
+.DS_Store
+.externalNativeBuild
+
+# Do not commit plain-text signing info
+release/*.properties
+release/*.gpg
 
 # node.js
 #
@@ -40,35 +43,20 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/
+# VS Code config
+org.eclipse.buildship.core.prefs
+.classpath
+.project
 
-**/fastlane/report.xml
-**/fastlane/Preview.html
-**/fastlane/screenshots
-**/fastlane/test_output
+# Temporary API docs
+docs/api
+package-list-coil-base
 
-# Bundle artifact
-*.jsbundle
+# Mkdocs temporary serving folder
+docs-gen
+site
+*.bak
+.idea/appInsightsSettings.xml
 
-# Ruby / CocoaPods
-**/Pods/
-/vendor/bundle/
-
-# Temporary files created by Metro to check the health of the file watcher
-.metro-health-check*
-
-# testing
-/coverage
-
-# Yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+#TFLite
+*.tflite

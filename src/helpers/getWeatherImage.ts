@@ -6,7 +6,7 @@ type WeatherImage = Record<
   }
 >;
 
-type WeatherCode =
+export type WeatherCode =
   | '0'
   | '1'
   | '2'
@@ -328,8 +328,9 @@ const items: Record<WeatherCode, WeatherImage> = {
  * @param weatherCode The WMO weather code
  * @returns A "day" image representation of the WMO weather code
  */
-function getWeatherImage(weatherCode: WeatherCode) {
-  // Write implementation for this function to return the "day" image for a given weather code.
+function getWeatherImage(weatherCode: WeatherCode, isDayTime: boolean) {
+  const timeOfDay = isDayTime ? 'day' : 'night';
+  return (items[weatherCode] && items[weatherCode][timeOfDay]) || { image: 'https://openweathermap.org/img/wn/02d@2x.png', description: 'Partly Cloudy' };
 }
 
 export default getWeatherImage;
